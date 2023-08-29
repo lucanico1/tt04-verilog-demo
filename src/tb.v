@@ -22,13 +22,11 @@ module tb ();
     reg  ena;
     reg  [7:0] ui_in;
     reg  [7:0] uio_in;
-
-    wire [6:0] segments = uo_out[6:0];
     wire [7:0] uo_out;
     wire [7:0] uio_out;
     wire [7:0] uio_oe;
 
-    tt_um_seven_segment_seconds tt_um_seven_segment_seconds (
+    tt_um_controlador_microbots tt_um_controlador_microbots (
     // include power ports for the Gate Level test
     `ifdef GL_TEST
         .VPWR( 1'b1),
